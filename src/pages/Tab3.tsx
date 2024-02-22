@@ -1,8 +1,17 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab3.css';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import ExploreContainer from "../components/ExploreContainer";
+import "./Tab2.css";
+import Tarjetatiendas from "../components/Login";
+import Login from "../components/Login";
 
 const Tab3: React.FC = () => {
+  const datos = [{ nombre: "Usuario" }, { nombre: "Contraseña" }];
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +25,16 @@ const Tab3: React.FC = () => {
             <IonTitle size="large">Tab 3</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          {datos.map((el) => (
+            <Login titulo={el.nombre} />
+          ))}
+        </div>
       </IonContent>
     </IonPage>
   );
