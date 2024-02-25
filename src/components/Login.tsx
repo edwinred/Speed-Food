@@ -5,6 +5,7 @@ import {
   IonCardSubtitle,
   IonCardTitle,
   IonCardContent,
+  IonButton,
 } from "@ionic/react";
 import { logIn } from "ionicons/icons";
 import { IonInput } from "@ionic/react";
@@ -27,6 +28,10 @@ function Login({ titulo }: { titulo: string | null }) {
         fill="outline"
         placeholder="Enter text"
       ></IonInput>
+
+      <IonButton routerLink="/app">
+        Hola
+      </IonButton>
     </>
   );
 }
